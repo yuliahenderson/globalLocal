@@ -8,3 +8,9 @@ CREATE TABLE currators (
   email VARCHAR NOT NULL,
   password VARCHAR NOT NULL
 );
+
+CREATE TABLE destinations (
+  id SERIAL PRIMARY KEY,
+  city_name VARCHAR NOT NULL,
+  currator_id INTEGER REFERENCES currators (id)
+);
