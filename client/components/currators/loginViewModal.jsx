@@ -11,7 +11,7 @@ const propTypes = {
 const LoginViewModal = ({ closeModal, logIn, signUp, buttonText }) => {
   return (
     <div>
-      <div id="ligin-modal">
+      <div id="login-modal">
         <div id="show-login">
           <CurratorForm closeModal={closeModal} login={logIn} signUp={signUp} buttonText={buttonText} />
         </div>

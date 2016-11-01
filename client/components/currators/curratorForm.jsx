@@ -18,12 +18,12 @@ class CurratorForm extends React.Component {
     const name = target.getAttribute('name');
     const value = target.value;
     const updated = {};
-    updated[name] = values;
+    updated[name] = value;
     this.setState(updated);
   }
   handleSubmit(e) {
     e.preventDefault();
-    if(this.props.buttonText==="signUp") {
+    if(this.props.buttonText==="Become a Currator") {
       this.props.signUp(this.state);
     } else {
       this.props.logIn(this.state);
@@ -36,7 +36,7 @@ class CurratorForm extends React.Component {
         <h2 id="close" onClick={this.props.closeModal}>x</h2>
         <input
           className="email_password"
-          type="text"
+          type="email"
           name="email"
           value={this.state.email}
           placeholder="email"

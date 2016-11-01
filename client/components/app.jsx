@@ -95,7 +95,10 @@ class App extends React.Component {
               <Login signUp={this.signUp} login={this.logIn} />
             </nav>
           </header>
-
+          <div id="main">
+          <img className="main_logo" src="/stylesheets/main_logo.png" />
+            <button className="get-started">GET STARTED</button>
+          </div>
           <footer>
           </footer>
         </div>
