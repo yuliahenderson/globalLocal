@@ -26475,23 +26475,20 @@
 	    }
 	  }, {
 	    key: 'logIn',
-	    value: function logIn(userDetails) {
+	    value: function logIn(curratorDetails) {
 	      var _this5 = this;
 	
-	      _superagent2.default.post('/api/login').send(userDetails).then(function () {
+	      _superagent2.default.post('/api/login').send(curratorDetails).then(function () {
 	        _this5.updateAuth();
 	        _this5.getCurrentCurratorDestinations();
-	        // this.setState({
-	
-	        // })
 	      });
 	    }
 	  }, {
 	    key: 'signUp',
-	    value: function signUp(userDetails) {
+	    value: function signUp(curratorDetails) {
 	      var _this6 = this;
 	
-	      _superagent2.default.post('/api/signup').send(userDetails).then(function () {
+	      _superagent2.default.post('/api/signup').send(curratorDetails).then(function () {
 	        _this6.updateAuth();
 	        _this6.getCurrentCurratorDestinations();
 	      });
@@ -26499,9 +26496,9 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var userDisplayElement = void 0;
+	      var curratorDisplayElement = void 0;
 	      if (this.state.token) {
-	        userDisplayElement = _react2.default.createElement(
+	        curratorDisplayElement = _react2.default.createElement(
 	          'div',
 	          null,
 	          _react2.default.createElement(
@@ -26530,7 +26527,7 @@
 	          _react2.default.createElement('footer', null)
 	        );
 	      } else {
-	        userDisplayElement = _react2.default.createElement(
+	        curratorDisplayElement = _react2.default.createElement(
 	          'div',
 	          null,
 	          _react2.default.createElement(
@@ -26544,7 +26541,17 @@
 	            _react2.default.createElement(
 	              'nav',
 	              null,
-	              _react2.default.createElement(_login2.default, { signUp: this.signUp, login: this.logIn })
+	              _react2.default.createElement(_login2.default, { signUp: this.signUp, logIn: this.logIn })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'main' },
+	            _react2.default.createElement('img', { className: 'main_logo', src: '/stylesheets/main_logo.png' }),
+	            _react2.default.createElement(
+	              'button',
+	              { className: 'get-started' },
+	              'GET STARTED'
 	            )
 	          ),
 	          _react2.default.createElement('footer', null)
@@ -26553,7 +26560,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        userDisplayElement
+	        curratorDisplayElement
 	      );
 	    }
 	  }]);
@@ -28485,11 +28492,11 @@
 	
 	var _loginView2 = _interopRequireDefault(_loginView);
 	
-	var _loginViewModal = __webpack_require__(240);
+	var _loginViewModal = __webpack_require__(238);
 	
 	var _loginViewModal2 = _interopRequireDefault(_loginViewModal);
 	
-	var _RegisterView = __webpack_require__(241);
+	var _RegisterView = __webpack_require__(240);
 	
 	var _RegisterView2 = _interopRequireDefault(_RegisterView);
 	
@@ -28562,7 +28569,7 @@
 	        }),
 	        this.state.modalOpen ? _react2.default.createElement(_loginViewModal2.default, {
 	          closeModal: this.closeModal,
-	          login: this.props.logIn,
+	          logIn: this.props.logIn,
 	          signUp: this.props.signUp,
 	          buttonText: this.state.buttonText
 	        }) : false
@@ -28592,9 +28599,9 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _LoginViewModal = __webpack_require__(238);
+	var _loginViewModal = __webpack_require__(238);
 	
-	var _LoginViewModal2 = _interopRequireDefault(_LoginViewModal);
+	var _loginViewModal2 = _interopRequireDefault(_loginViewModal);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -28676,11 +28683,11 @@
 	    null,
 	    _react2.default.createElement(
 	      'div',
-	      { id: 'ligin-modal' },
+	      { id: 'login-modal' },
 	      _react2.default.createElement(
 	        'div',
 	        { id: 'show-login' },
-	        _react2.default.createElement(_curratorForm2.default, { closeModal: closeModal, login: logIn, signUp: signUp, buttonText: buttonText })
+	        _react2.default.createElement(_curratorForm2.default, { closeModal: closeModal, logIn: logIn, signUp: signUp, buttonText: buttonText })
 	      )
 	    )
 	  );
@@ -28741,17 +28748,17 @@
 	      var name = target.getAttribute('name');
 	      var value = target.value;
 	      var updated = {};
-	      updated[name] = values;
+	      updated[name] = value;
 	      this.setState(updated);
 	    }
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
-	      if (this.props.buttonText === "signUp") {
-	        this.props.signUp(this.state);
-	      } else {
+	      if (this.props.buttonText == 'login') {
 	        this.props.logIn(this.state);
+	      } else {
+	        this.props.signUp(this.state);
 	      }
 	    }
 	  }, {
@@ -28770,7 +28777,7 @@
 	          ),
 	          _react2.default.createElement('input', {
 	            className: 'email_password',
-	            type: 'text',
+	            type: 'email',
 	            name: 'email',
 	            value: this.state.email,
 	            placeholder: 'email',
@@ -28806,64 +28813,13 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _curratorForm = __webpack_require__(239);
-	
-	var _curratorForm2 = _interopRequireDefault(_curratorForm);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var propTypes = {
-	  closeModal: _react2.default.PropTypes.func,
-	  logIn: _react2.default.PropTypes.func,
-	  signUp: _react2.default.PropTypes.func,
-	  buttonText: _react2.default.PropTypes.string.isRequired
-	};
-	
-	var LoginViewModal = function LoginViewModal(_ref) {
-	  var closeModal = _ref.closeModal,
-	      logIn = _ref.logIn,
-	      signUp = _ref.signUp,
-	      buttonText = _ref.buttonText;
-	
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      'div',
-	      { id: 'ligin-modal' },
-	      _react2.default.createElement(
-	        'div',
-	        { id: 'show-login' },
-	        _react2.default.createElement(_curratorForm2.default, { closeModal: closeModal, login: logIn, signUp: signUp, buttonText: buttonText })
-	      )
-	    )
-	  );
-	};
-	
-	LoginViewModal.propTypes = propTypes;
-	exports.default = LoginViewModal;
-
-/***/ },
-/* 241 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _loginViewModal = __webpack_require__(240);
+	var _loginViewModal = __webpack_require__(238);
 	
 	var _loginViewModal2 = _interopRequireDefault(_loginViewModal);
 	

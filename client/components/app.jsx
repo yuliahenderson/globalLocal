@@ -49,29 +49,26 @@ class App extends React.Component {
       toke: cookie.load('token'),
     });
   }
-  logIn(userDetails) {
+  logIn(curratorDetails) {
     request.post('/api/login')
-           .send(userDetails)
+           .send(curratorDetails)
            .then(() => {
             this.updateAuth();
             this.getCurrentCurratorDestinations();
-            // this.setState({
-
-            // })
            });
   }
-  signUp(userDetails) {
+  signUp(curratorDetails) {
     request.post('/api/signup')
-           .send(userDetails)
+           .send(curratorDetails)
            .then(() => {
             this.updateAuth();
             this.getCurrentCurratorDestinations();
            });
   }
   render() {
-    let userDisplayElement;
+    let curratorDisplayElement;
     if (this.state.token) {
-      userDisplayElement = (
+      curratorDisplayElement = (
         <div>
           <header className="clearfix" id="navigation">
           <logo>GL</logo>
@@ -87,12 +84,12 @@ class App extends React.Component {
         </div>
       );
     } else {
-      userDisplayElement = (
+      curratorDisplayElement = (
         <div>
           <header className="clearfix" id="navigation">
             <logo>GL</logo>
             <nav>
-              <Login signUp={this.signUp} login={this.logIn} />
+              <Login signUp={this.signUp} logIn={this.logIn} />
             </nav>
           </header>
           <div id="main">
@@ -106,7 +103,7 @@ class App extends React.Component {
     }
     return (
       <div>
-        {userDisplayElement}
+        {curratorDisplayElement}
       </div>
     );
   }

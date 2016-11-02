@@ -13,7 +13,7 @@ const LoginViewModal = ({ closeModal, logIn, signUp, buttonText }) => {
     <div>
       <div id="login-modal">
         <div id="show-login">
-          <CurratorForm closeModal={closeModal} login={logIn} signUp={signUp} buttonText={buttonText} />
+          <CurratorForm closeModal={closeModal} logIn={logIn} signUp={signUp} buttonText={buttonText} />
         </div>
       </div>
     </div>

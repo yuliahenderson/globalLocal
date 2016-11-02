@@ -49,7 +49,7 @@ class Login extends React.Component {
         {this.state.modalOpen ?
           <LoginViewModal
             closeModal={this.closeModal}
-            login={this.props.logIn}
+            logIn={this.props.logIn}
             signUp={this.props.signUp}
             buttonText={this.state.buttonText}
           /> : false }

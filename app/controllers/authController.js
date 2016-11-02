@@ -3,7 +3,7 @@ const createToken = require('../utilis/createToken');
 const bcrypt = require('bcrypt');
 
 class AuthController {
-  static login(req, res) {
+  static logIn(req, res) {
     const { email, password } = req.body;
     CurratorDAO.findBy({ email })
       .then((currator) => {

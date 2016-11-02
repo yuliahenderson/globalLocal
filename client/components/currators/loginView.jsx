@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginViewModal from './LoginViewModal.jsx';
+import LoginViewModal from './loginViewModal.jsx';
 
 const propTypes = {
   openModal: React.PropTypes.func,

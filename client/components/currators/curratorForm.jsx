@@ -9,7 +9,7 @@ const propTypes = {
 class CurratorForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {email: '', password: '' };
+    this.state = { email: '', password: '' };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -23,10 +23,10 @@ class CurratorForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    if(this.props.buttonText==="Become a Currator") {
-      this.props.signUp(this.state);
-    } else {
+    if(this.props.buttonText=='login') {
       this.props.logIn(this.state);
+    } else {
+      this.props.signUp(this.state);
     }
   }
   render() {

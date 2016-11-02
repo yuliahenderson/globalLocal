@@ -7,6 +7,7 @@ const Routes = () => {
   return(
     <Router history={hashHistory}>
       <Route path="/" component={App} />
+
     </Router>
   );
 };
