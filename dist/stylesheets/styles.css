@@ -12,7 +12,12 @@ body {
 }
 
 logo {
+ font-size: 2em;
  float: left;
+ letter-spacing: 3px;
+ position: relative;
+ left: 0.2em;
+ top: 0.5em;
 }
 
 nav {
@@ -26,7 +31,7 @@ nav {
  background-image: url("main_image.jpeg");
  background-repeat:no-repeat;
  background-size: cover;
- height: 800px;
+ height: 600px;
  margin-left: -1em;
 }
 
@@ -64,11 +69,13 @@ nav {
 .register {
   border: none;
   position: relative;
-  top: 0.5em;
-  margin-left: 1em;
+  top: 0.2em;
+  left: 1.5em;
   padding: 0.7em;
   font-size: 1em;
   cursor: pointer;
+  background-color: black;
+  color: #FFFFFF;
 }
 #login-modal {
  position: fixed;
@@ -137,14 +144,14 @@ input[type="password"] {
   float: left;
 }
 
-.city_name {
+/*.city_name {
   font-size: 2em;
   color: #FFFFFF;
   letter-spacing: 3px;
   background-color: rgba(255,255,255,0.4);
   width: 8em;
   text-align: center;
-}
+}*/
 
 a {
   text-decoration: none;
@@ -152,14 +159,14 @@ a {
   color: #FFFFFF;
 }
 
-#barcelona {
+/*#barcelona {
   background-image: url("barcelona_image.jpeg");
   background-size: cover;
 }
 #newyork {
   background-image: url("newyork_image.jpeg");
   background-size: cover;
-}
+}*/
 
 #map {
   height: 100%;
@@ -171,4 +178,23 @@ h1 {
 h2{
   text-align: center;
   font-size: 3em;
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  background-color: rgba(255,255,255,0.4);
+  width: 8em;
+  position: relative;
+  left: 38%;
+  top: 20%;
+
+}
+.locationLink {
+  color: black;
+  text-decoration: underline;
+}
+#cityView {
+  background-image: url("newyork_image.jpeg");
+  background-size: cover;
+  height: 150px;
+  border: none;
+  margin-top: -2em;
 }
