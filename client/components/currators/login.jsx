@@ -1,10 +1,10 @@
 import React from 'react';
-import LoginView from './loginView.jsx';
+// import LoginView from './loginView.jsx';
 import LoginViewModal from './loginViewModal.jsx';
 import RegisterView from './RegisterView.jsx';
 
 const propTypes = {
-  logIn: React.PropTypes.func,
+  // logIn: React.PropTypes.func,
   signUp: React.PropTypes.func,
 };
 
@@ -15,41 +15,37 @@ class Login extends React.Component {
       modalOpen: false,
       buttonText: '',
     };
-    this.openModalLogin = this.openModalLogin.bind(this);
+    // this.openModalLogin = this.openModalLogin.bind(this);
     this.openModalSignup = this.openModalSignup.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
-  openModalLogin() {
-    this.setState({
-      modalOpen: true,
-      buttonText: 'login',
-    });
-  }
+  // openModalLogin() {
+  //   this.setState({
+  //     modalOpen: true,
+  //     buttonText: 'login',
+  //   });
+  // }
   openModalSignup() {
     this.setState({
       modalOpen: true,
-      buttonText: 'Become a Currator',
+      buttonText: 'Become an Insider',
     });
   }
   closeModal() {
     this.setState({
       modalOpen: false,
-      buttonText: 'login'
+      buttonText: 'Become an Insider'
     });
   }
   render() {
     return(
       <div>
-        <LoginView
-          openModal={this.openModalLogin}
-        />
         <RegisterView
           openModal={this.openModalSignup}
         />
         {this.state.modalOpen ?
           <LoginViewModal
             closeModal={this.closeModal}
-            logIn={this.props.logIn}
             signUp={this.props.signUp}
             buttonText={this.state.buttonText}
           /> : false }

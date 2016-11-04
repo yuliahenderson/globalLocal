@@ -12,7 +12,7 @@ class RegisterView extends React.Component {
         <button
           className="register"
           onClick={this.props.openModal}
-          >Become a Currator</button>
+          >Become an Insider</button>
       </div>
     );
   }

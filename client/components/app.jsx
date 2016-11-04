@@ -2,7 +2,9 @@ import React from 'react';
 import request from 'superagent';
 import cookie from 'react-cookie';
 import Login from './currators/login.jsx';
+import { Link } from 'react-router';
 import CurratorForm from './currators/curratorForm.jsx';
+import DestinationSearch from './destinations/destinationSearch.jsx';
 
 const propTypes = {};
 
@@ -10,12 +12,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      destination: [],
+      destinations: [],
     }
     this.logIn = this.logIn.bind(this);
     this.signUp = this.signUp.bind(this);
     this.signOut = this.signOut.bind(this);
-    this.sendDestination = this.sendDestination.bind(this);
+    // this.sendDestination = this.sendDestination.bind(this);
   }
   componentDidMount() {
     this.updateAuth();
@@ -33,13 +35,13 @@ class App extends React.Component {
             this.updateAuth();
            })
   }
-  sendDestination({ city_name }) {
-    request.post('/api/destinations')
-           .send({ city_name })
-           .then(() => {
-            this.getCurrentCurratorDestinations();
-           });
-  }
+  // sendDestination({ city_name }) {
+  //   request.post('/api/destinations')
+  //          .send({ city_name })
+  //          .then(() => {
+  //           this.getCurrentCurratorDestinations();
+  //          });
+  // }
   signOut() {
     request.post('/api/signOut')
            .then(() => this.updateAuth());
@@ -94,7 +96,11 @@ class App extends React.Component {
           </header>
           <div id="main">
           <img className="main_logo" src="/stylesheets/main_logo.png" />
-            <button className="get-started">GET STARTED</button>
+            <button className="get-started">
+            <Link to="/destinations">
+            GET STARTED
+            </Link>
+            </button>
           </div>
           <footer>
           </footer>
