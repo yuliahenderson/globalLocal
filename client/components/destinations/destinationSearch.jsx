@@ -56,8 +56,12 @@ componentDidMount(){
           let markerNewYork = new google.maps.Marker( {
           position: {lat: 40.730610, lng: -73.935242},
           map: this.map,
+          url: 'http://localhost:8080/#/newyork',
           title: 'New York'
         });
+    google.maps.event.addListener(markerNewYork, 'click', function() {
+    window.location.href = markerNewYork.url;
+    });
           let markerBigIslandHawaii = new google.maps.Marker( {
           position: {lat: 19.5429, lng: -155.6659},
           map: this.map,
@@ -75,7 +79,7 @@ render(){
   return(
     <div>
      <header className="clearfix" id="navigation">
-        <logo>GL</logo>
+        <logo>globalLOCAL</logo>
         <nav>
             <Login signUp={this.signUp} logIn={this.logIn} />
         </nav>

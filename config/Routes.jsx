@@ -3,6 +3,7 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import App from '../client/components/app.jsx';
 import DestinationSearch from '../client/components/destinations/destinationSearch.jsx';
 import Barcelona from '../client/components/destinations/barcelona.jsx';
+import NewYork from '../client/components/destinations/newyork.jsx';
 
 
 const Routes = () => {
@@ -11,6 +12,7 @@ const Routes = () => {
       <Route path="/" component={App} />
       <Route path="destinations" component={DestinationSearch} />
       <Route path="barcelona" component={Barcelona} />
+      <Route path="newyork" component={NewYork} />
     </Router>
   );
 };

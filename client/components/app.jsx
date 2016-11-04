@@ -89,7 +89,7 @@ class App extends React.Component {
       curratorDisplayElement = (
         <div>
           <header className="clearfix" id="navigation">
-            <logo>GL</logo>
+            <logo>globalLOCAL</logo>
             <nav>
               <Login signUp={this.signUp} logIn={this.logIn} />
             </nav>
