@@ -1,59 +1,85 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Geosuggest from 'react-geosuggest';
+import Login from '../subscribers/login.jsx';
+import Header from '../subscribers/header.jsx';
 
 const mapStyle = {
       height: "60vh",
-      width: "90vw",
-      top: 20,
-      left: 50,
+      width: "98.5vw",
       padding: 0,
     };
 
 class Barcelona extends React.Component {
-  constructor(props){
-    super(props)
-  }
+
 
   componentDidMount() {
     this.map = new google.maps.Map(this.refs.map, {
         center: {lat: 41.385064, lng: 2.173403},
-        zoom:12,
+        zoom:13,
         mapTypeId: 'roadmap',
     });
+         let infowindow = new google.maps.InfoWindow;
+
          let markerSohoHouse = new google.maps.Marker( {
           position: {lat: 41.3784473, lng: 2.1793251},
           map: this.map,
-          url: 'http://localhost:8080/#/barcelona',
           title: 'Soho House Barcelona'
         });
-          let markerWhotel = new google.maps.Marker( {
-          position: {lat: 41.3685139, lng: 2.1901846},
+         google.maps.event.addListener(markerSohoHouse, 'click', function() {
+         let markerSohoHouseContent = '<p class="contentText">Soho House Barcelona, ' +
+         'hip boutique hotel in the city\'s Gothic Quarter. ' +
+         '<a class="locationLink" href="https://www.sohohousebarcelona.com" target="_blank"> Find' +
+         'out more...</a></p>';
+         infowindow.setContent(markerSohoHouseContent);
+         infowindow.open(this.map, markerSohoHouse );
+         });
+
+
+         let markerCuidadCondal = new google.maps.Marker( {
+          position: {lat: 41.3888129, lng: 2.1668475},
           map: this.map,
-          url: 'http://localhost:8080/#/barcelona',
-          title: 'W Hotel Barcelona'
+          title: 'Cuidad Condal'
         });
+
+         google.maps.event.addListener(markerCuidadCondal, 'click', function() {
+         let markerCuidadCondalContent = '<p class="contentText">Cuidad Condal, authentic spanish ' +
+         'restaurant. Enjoy outdoor seating and great tapas.</p>';
+         infowindow.setContent(markerCuidadCondalContent);
+         infowindow.open(this.map, markerCuidadCondal );
+         });
+
+         let markerCasaMila = new google.maps.Marker( {
+          position: {lat: 41.3953805, lng: 2.1619614},
+          map: this.map,
+          title: 'Casa Milà'
+        });
+
+         google.maps.event.addListener(markerCasaMila, 'click', function() {
+         let markerCasaMilaContent = '<p class="contentText">Casa Milà, popularly known as ‘La Pedrera’, ' +
+         'one of the unique architectual buildings in Barcelona, designed by Antoni Gaudí. ' +
+         '<a class="locationLink" href="https://www.lapedrera.com" target="_blank">Get Tickets</a></p>';
+         infowindow.setContent(markerCasaMilaContent);
+         infowindow.open(this.map, markerCasaMila );
+         });
+
+
   }
 
 render(){
   return(
-    <div
-      ref="map" style={mapStyle} ref="map">
+    <div>
+      <Header />
+      <section id="barcelonaView">
+      <h2>BARCELONA</h2>
+      </section>
+      <p className="locationPage">Click on the pin to find out more about the place</p>
+      <div
+        ref="map" style={mapStyle} ref="map">
+      </div>
     </div>
   )
+ }
 }
-}
-
-    // <h2>BARCELONA</h2>
-    // <h3></h3>
-    // <p className="placeDescription">
-    //  Soho House Barcelona is a members' club and hotel in the city's Gothic
-    //  Quarter, facing Port Vell marina.
-    // <iframe
-    //   width="250"
-    //   height="250"
-    //   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB3YLYJ2zjI6KCzh8_VzHmuOs6zJ0PuzGc&q=Soho+House+Barcelona,Barcelona+Spain">
-    // </iframe>
-    // </p>
 
 export default Barcelona;

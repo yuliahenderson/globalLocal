@@ -7,17 +7,11 @@ function sql(file) {
 }
 
 const sqlProvider = {
-  currators: {
-    all: sql('./sql/currator/all.sql'),
-    find: sql('./sql/currator/find.sql'),
-    create: sql('./sql/currator/create.sql'),
-    delete: sql('./sql/currator/delete.sql'),
-  },
-  destinations: {
-    all: sql('./sql/destination/all.sql'),
-    create: sql('./sql/destination/create.sql'),
-    delete: sql('./sql/destination/delete.sql'),
-    find: sql('./sql/destination/find.sql'),
+  subscribers: {
+    all: sql('./sql/subscriber/all.sql'),
+    find: sql('./sql/subscriber/find.sql'),
+    create: sql('./sql/subscriber/create.sql'),
+    delete: sql('./sql/subscriber/delete.sql'),
   },
 };
 

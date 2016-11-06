@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
-const curratorRouter = require('./routes/curratorRouter');
-const destinationRouter = require('./routes/destinationRouter');
+const subscriberRouter = require('./routes/subscriberRouter');
+// const destinationRouter = require('./routes/destinationRouter');
 const authRouter = require('./routes/authRouter');
 const authentication = require('./middleware/authentication');
 const session = require('express-session');
@@ -25,8 +25,8 @@ app.use(morgan('dev'));
 
 app.use('/api', authentication);
 app.use('/api', authRouter);
-app.use('/api/currators', curratorRouter);
-app.use('/api/destinations', destinationRouter);
+app.use('/api/subscribers', subscriberRouter);
+// app.use('/api/destinations', destinationRouter);
 
 
 module.exports = app;
