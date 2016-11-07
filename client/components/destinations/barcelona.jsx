@@ -73,7 +73,7 @@ render(){
       <section id="barcelonaView">
       <h2>BARCELONA</h2>
       </section>
-      <p className="locationPage">Click on the pin to find out more about the place</p>
+      <p className="locationPage">Click on a pin to find out more about a recommended place</p>
       <div
         ref="map" style={mapStyle} ref="map">
       </div>

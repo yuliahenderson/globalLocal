@@ -91,7 +91,7 @@ render(){
   return(
     <div>
       <Header />
-        <h1>CLICK THE PIN ON THE MAP:</h1>
+        <h1>CLICK A PIN ON THE MAP TO EXPLORE A NEW CITY:</h1>
      <div
        ref="map" style={mapStyle} ref="map">
      </div>

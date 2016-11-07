@@ -35,7 +35,7 @@ render(){
   return(
     <div>
     <header className="clearfix" id="navigation">
-      <logo><Link className="logoClick" to="/destinations">globalLOCAL</Link></logo>
+      <logo><Link className="logoClick" to="/">globalLOCAL</Link></logo>
       <nav>
         <Login signUp={this.signUp} />
       </nav>
