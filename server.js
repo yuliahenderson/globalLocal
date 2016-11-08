@@ -23,14 +23,16 @@ if (process.env.ENV === 'dev') {
   app.use(webpackHotMiddleware(compiler));
 }
 
+// if(!process.env.PORT) {
+// require(‘dotenv’).config();
+// }
+
 app.use(express.static(path.join(__dirname, '/dist')));
 app.get('/', (request, response) => {
   response.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-if(!process.env.PORT) {
-require(‘dotenv’).config();
-}
+
 
 const port = process.env.PORT;
 app.listen(port, () => {
