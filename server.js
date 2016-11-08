@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (!process.env) {
+  require('dotenv').config();
+}
 
 process.env.ENV = process.env.ENV || 'dev';
 
@@ -8,7 +10,7 @@ const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('./webpack.config');
-const app = require('./app/app');
+const app = require('./app/app.js');
 
 if (process.env.ENV === 'dev') {
   const compiler = webpack(config);
@@ -23,9 +25,6 @@ if (process.env.ENV === 'dev') {
   app.use(webpackHotMiddleware(compiler));
 }
 
-// if(!process.env.PORT) {
-// require(‘dotenv’).config();
-// }
 
 app.use(express.static(path.join(__dirname, '/dist')));
 app.get('/', (request, response) => {
