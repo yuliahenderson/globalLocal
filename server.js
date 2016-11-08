@@ -28,6 +28,10 @@ app.get('/', (request, response) => {
   response.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
+if(!process.env.PORT) {
+require(‘dotenv’).config();
+}
+
 const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`LISTENING on Port ${port}`);
