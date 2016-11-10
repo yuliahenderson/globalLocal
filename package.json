@@ -6,10 +6,14 @@
   "engines": {
   "node": "6.1.0"
 },
+  // "scripts": {
+  //   "test": "echo \"Error: no test specified\" && exit 1",
+  //   "dev": "webpack-dev-server --inline --hot --progress --colors",
+  //   "start": "node ./server.js"
+
+  // },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server.js"
-    // "dev": "webpack-dev-server --inline --hot --progress --colors"
   },
   "repository": {
     "type": "git",
