@@ -2,7 +2,7 @@
   "name": "globallocal",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.jsx",
   "engines": {
   "node": "6.1.0"
 },
