@@ -1,8 +1,8 @@
-// if (!process.env) {
-//   require('dotenv').config({silent: true});
-// }
+if (!process.env) {
+  require('dotenv').config({silent: true});
+}
 
-// process.env.ENV = process.env.ENV || 'dev';
+process.env.ENV = process.env.ENV || 'dev';
 
 const path = require('path');
 const express = require('express');
