@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 if (!process.env) {
   require('dotenv').config();
