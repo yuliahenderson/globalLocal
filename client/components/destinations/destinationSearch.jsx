@@ -27,7 +27,7 @@ componentDidMount(){
          let markerBarcelona = new google.maps.Marker( {
           position: {lat: 41.385064, lng: 2.173403},
           map: this.map,
-          url: 'http://localhost:8080/#/barcelona',
+          url: 'https://globallocal.herokuapp.com/#/barcelona',
           title: 'Barcelona'
         });
     google.maps.event.addListener(markerBarcelona, 'click', function() {
@@ -42,7 +42,7 @@ componentDidMount(){
           let markerLondon = new google.maps.Marker( {
           position: {lat: 51.5074, lng: 0.1278},
           map: this.map,
-          url: 'http://localhost:8080/#/london',
+          url: 'https://globallocal.herokuapp.com/#/london',
           title: 'London'
         });
     google.maps.event.addListener(markerLondon, 'click', function() {
@@ -51,7 +51,7 @@ componentDidMount(){
           let markerStPetersburg = new google.maps.Marker( {
           position: {lat: 59.9343, lng: 30.3351},
           map: this.map,
-          url: 'http://localhost:8080/#/saintpetersburg',
+          url: 'https://globallocal.herokuapp.com/#/saintpetersburg',
           title: 'Saint-Petersburg'
         });
     google.maps.event.addListener(markerStPetersburg, 'click', function() {
@@ -60,7 +60,7 @@ componentDidMount(){
           let markerMoscow = new google.maps.Marker( {
           position: {lat: 55.7558, lng: 37.617},
           map: this.map,
-          url: 'http://localhost:8080/#/moscow',
+          url: 'https://globallocal.herokuapp.com/#/moscow',
           title: 'Moscow'
         });
     google.maps.event.addListener(markerMoscow, 'click', function() {
@@ -69,7 +69,7 @@ componentDidMount(){
           let markerNewYork = new google.maps.Marker( {
           position: {lat: 40.730610, lng: -73.935242},
           map: this.map,
-          url: 'http://localhost:8080/#/newyork',
+          url: 'https://globallocal.herokuapp.com/#/newyork',
           title: 'New York'
         });
     google.maps.event.addListener(markerNewYork, 'click', function() {
@@ -78,7 +78,7 @@ componentDidMount(){
           let markerBigIslandHawaii = new google.maps.Marker( {
           position: {lat: 19.5429, lng: -155.6659},
           map: this.map,
-          url: 'http://localhost:8080/#/bigislandhawaii',
+          url: 'https://globallocal.herokuapp.com/#/bigislandhawaii',
           title: 'Big Island Hawaii'
         });
     google.maps.event.addListener(markerBigIslandHawaii, 'click', function() {
