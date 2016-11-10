@@ -16,6 +16,10 @@
   "bugs": {
     "url": "https://github.com/yuliahenderson/globalLocal/issues"
   },
+
+  "engines": {
+  "node": "6.1.0"
+},
   "homepage": "https://github.com/yuliahenderson/globalLocal#readme",
   "dependencies": {
     "babel-core": "^6.18.0",
