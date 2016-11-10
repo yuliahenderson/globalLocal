@@ -1,7 +1,7 @@
 import React from 'react';
 // import LoginView from './loginView.jsx';
 import LoginViewModal from './loginViewModal.jsx';
-import RegisterView from './RegisterView.jsx';
+// import RegisterView from './RegisterView.jsx';
 
 const propTypes = {
   // logIn: React.PropTypes.func,
@@ -40,15 +40,11 @@ class Login extends React.Component {
   render() {
     return(
       <div>
-        <RegisterView
-          openModal={this.openModalSignup}
-        />
-        {this.state.modalOpen ?
           <LoginViewModal
             closeModal={this.closeModal}
             signUp={this.props.signUp}
             buttonText={this.state.buttonText}
-          /> : false }
+          />
       </div>
     );
   }
