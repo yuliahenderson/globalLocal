@@ -1,5 +1,5 @@
 if (!process.env) {
-  require('dotenv').config();
+  require('dotenv').config({silent: true});
 }
 
 process.env.ENV = process.env.ENV || 'dev';
