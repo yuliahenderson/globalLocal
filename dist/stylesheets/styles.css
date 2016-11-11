@@ -274,13 +274,14 @@ h2{
   line-height: 2em;
 }
 
-@media(max-width: 1536px) {
+@media(max-width: 1024px) {
 
  #main {
  background-image: url("main_image.jpeg");
  background-repeat:no-repeat;
+ background-size: cover;
  height: 80.8em;
- margin-left: -1em;
+ margin-left: -2em;
 }
 
   }
