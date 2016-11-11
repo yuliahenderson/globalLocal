@@ -280,8 +280,9 @@ h2{
  background-image: url("main_image.jpeg");
  background-repeat:no-repeat;
  background-size: cover;
- height: 80.8em;
- margin-left: -2em;
+ height: 60.8em;
+ margin-right: -2em;
+ margin-left: -14em;
 }
 
   }
