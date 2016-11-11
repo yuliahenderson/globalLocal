@@ -280,9 +280,24 @@ h2{
  background-image: url("main_image.jpeg");
  background-repeat:no-repeat;
  background-size: cover;
- height: 60.8em;
+ height: 80.8em;
  margin-right: -2em;
- margin-left: -14em;
+ margin-left: -30em;
+}
+.main_logo {
+  margin-left: 39%;
+ }
+
+.get-started {
+  position: relative;
+  top: 24%;
+  right: -55%;
+  padding: 1em;
+  font-size: 1.5em;
+  background-color: none;
+  border: 6px solid white;
+  background: none;
+  color: #FFFFFF;
 }
 
   }
