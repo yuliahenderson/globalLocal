@@ -282,16 +282,16 @@ h2{
  background-size: cover;
  height: 80.8em;
  margin-right: -2em;
- margin-left: -30em;
+ margin-left: -4em;
 }
 .main_logo {
-  margin-left: 39%;
+  margin-left: 27.5%;
  }
 
 .get-started {
   position: relative;
-  top: 24%;
-  right: -54%;
+  top: 28%;
+  right: 38%;
   padding: 1em;
   font-size: 2em;
   background-color: none;
