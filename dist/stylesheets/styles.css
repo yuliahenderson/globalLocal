@@ -289,9 +289,12 @@ h2{
  }
 
 .get-started {
-  position: relative;
+/*  position: relative;
   top: 28%;
-  right: -40%;
+  right: -40%;*/
+  position: absolute;
+  top: 80%;
+  left: 37%;
   padding: 1em;
   font-size: 2em;
   background-color: none;
