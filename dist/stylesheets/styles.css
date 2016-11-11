@@ -273,3 +273,14 @@ h2{
   width: 250px;
   line-height: 2em;
 }
+
+@media(max-width: 768px) {
+
+ #main {
+ background-image: url("main_image.jpeg");
+ background-repeat:no-repeat;
+ height: 42.8em;
+ margin-left: -1em;
+}
+
+  }
