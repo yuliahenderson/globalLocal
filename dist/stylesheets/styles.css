@@ -305,5 +305,17 @@ h2{
 h2 {
   left: 34%;
 }
-
+input {
+  width: 20em;
+  height: 40px;
+  margin: 1em;
+}
+#close {
+ color: #dcdcdc;
+ float: right;
+ position: relative;
+ margin-right: 20%;
+ margin-top: -6%;
+ font-size: 1.5em;
+}
   }
