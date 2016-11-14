@@ -321,7 +321,16 @@ input {
 
 #login-modal {
  position: fixed;
- height: 30%;
+ height: 25%;
  width: 50%;
  top: 25%;
   }
+form {
+  margin-left: -1em;
+}
+}
+
+
+
+
+
