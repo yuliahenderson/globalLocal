@@ -274,7 +274,7 @@ h2{
   line-height: 2em;
 }
 
-@media (max-width : 780px) {
+@media (max-width : 768px) {
 
  #main {
  background-image: url("main_image.jpeg");
@@ -333,7 +333,7 @@ form {
 }
 }
 
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {
 
 #login-modal {
  position: fixed;
@@ -341,7 +341,7 @@ form {
  width: 50%;
  top: 25%;
   }
-}
+}*/
 
 @media(max-width: 420px) {
 
