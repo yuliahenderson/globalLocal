@@ -330,7 +330,7 @@ form {
 }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 460px) {
 
  #main {
  background-image: url("main_image.jpeg");
