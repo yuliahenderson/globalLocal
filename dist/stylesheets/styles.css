@@ -330,6 +330,17 @@ form {
 }
 }
 
+@media(max-width: 480px) {
+
+ #main {
+ background-image: url("main_image.jpeg");
+ background-repeat:no-repeat;
+ background-size: cover;
+ height: 90em;
+ margin-right: -2em;
+ margin-left: -4em;
+}
+
 
 
 
