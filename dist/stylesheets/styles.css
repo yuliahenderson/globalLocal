@@ -330,13 +330,13 @@ form {
 }
 }
 
-@media(max-width: 460px) {
+@media(max-width: 420px) {
 
  #main {
  background-image: url("main_image.jpeg");
  background-repeat:no-repeat;
  background-size: cover;
- height: 90em;
+ height: 100em;
  margin-right: -2em;
  margin-left: -4em;
 }
