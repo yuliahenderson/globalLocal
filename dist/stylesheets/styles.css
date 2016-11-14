@@ -333,7 +333,7 @@ form {
 }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
 
 #login-modal {
  position: fixed;
@@ -343,7 +343,7 @@ form {
   }
 }
 
-@media(max-width: 420px) {
+@media(min-width: 420px) {
 
  #main {
  background-image: url("main_image.jpeg");
