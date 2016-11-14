@@ -274,7 +274,7 @@ h2{
   line-height: 2em;
 }
 
-@media (min-device-width : 768px) {
+@media (max-width : 768px) {
 
  #main {
  background-image: url("main_image.jpeg");
