@@ -6,7 +6,7 @@ globalLocal is a currated travel app, that helps you to find recommended places 
 ![alt text](globalmap.png "global map page screen-shot")
 ![alt text](citymap.png "city map page screen-shot")
 ![alt text](abouttheplace.png "about the place to visit screen-shot")
-![alt text](citmap_2.png "city map page screen-shot")
+![alt text](citymap_2.png "city map page screen-shot")
 
 # How to use the app:
 
